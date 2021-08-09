@@ -573,7 +573,7 @@ void measure() {
 void loop()
 {
 	client.loop();	// keep alive etc.
-	long now = millis();
+	unsigned long now = millis();
 
 	if (lastMillis == 0 || (now - lastMillis >= min (MEASURE_PERIOD, MEASURE_PERIOD_DS18B20))) {
 		if (WiFi.status() != WL_CONNECTED) {
